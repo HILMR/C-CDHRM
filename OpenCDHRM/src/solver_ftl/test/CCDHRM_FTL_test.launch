@@ -1,0 +1,18 @@
+<launch>
+  <arg name="rand" default="False" />
+  <include file="$(find model_ccdhrm)/launch/display.launch" />
+  <group unless="$(arg rand)">
+	  <node
+    name="CCDHRM_FTL_test"
+    pkg="solver_ftl"
+    type="ccdhrm_ftl_test"
+    args="load $(find solver_ftl)/test/planning_results.txt" />
+  </group>
+  <group if="$(arg rand)">
+	  <node
+    name="CCDHRM_FTL_test"
+    pkg="solver_ftl"
+    type="ccdhrm_ftl_test"
+    args="" />
+  </group>
+</launch>

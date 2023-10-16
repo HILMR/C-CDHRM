@@ -1,0 +1,22 @@
+<launch>
+  <!-- Enable GUI interface -->
+  <arg name="gui" default="False" />
+  <param
+    name="robot_description"
+    textfile="$(find model_ccdhrm)/urdf/model_ccdhrm.urdf" />
+  <group if="$(arg gui)">
+	  <node
+		name="joint_state_publisher_gui"
+		pkg="joint_state_publisher_gui"
+		type="joint_state_publisher_gui" />
+  </group>
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find model_ccdhrm)/urdf.rviz" />
+</launch>

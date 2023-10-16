@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="model_ccdhrm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="8.0962E-13 -0.017801 0.22145"
+        rpy="0 0 0" />
+      <mass
+        value="2.29" />
+      <inertia
+        ixx="0.028299"
+        ixy="-1.5621E-08"
+        ixz="1.5037E-16"
+        iyy="0.040957"
+        iyz="4.96E-08"
+        izz="0.042838" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.47059 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_rot">
+    <inertial>
+      <origin
+        xyz="-0.011052 -0.02335 0.04928"
+        rpy="0 0 0" />
+      <mass
+        value="1.9255" />
+      <inertia
+        ixx="0.023549"
+        ixy="5.414E-05"
+        ixz="-0.0077205"
+        iyy="0.035682"
+        iyz="-1.5799E-05"
+        izz="0.023272" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_rot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.78431 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_rot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_rot"
+    type="revolute">>
+    <origin
+      xyz="0 0 0.557"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_rot" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.089676 5.9827E-10 1.3504E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.10982" />
+      <inertia
+        ixx="6.1388E-05"
+        ixy="1.8879E-12"
+        ixz="4.5825E-12"
+        iyy="0.00010032"
+        iyz="5.6078E-13"
+        izz="0.00010134" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.22353 0.22353 0.22353 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="-0.098751 -0.092 0.40808"
+      rpy="0 0 0" />
+    <parent
+      link="link_rot" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="1.0039E-10 -7.2677E-10 -2.1014E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.005503" />
+      <inertia
+        ixx="6.7326E-07"
+        ixy="2.2131E-15"
+        ixz="1.6207E-14"
+        iyy="4.3734E-07"
+        iyz="1.9124E-14"
+        izz="4.3734E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.94118 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.089051 8.8273E-10 2.0241E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.079545" />
+      <inertia
+        ixx="3.2762E-05"
+        ixy="2.234E-12"
+        ixz="5.4631E-12"
+        iyy="0.00010501"
+        iyz="-2.5542E-12"
+        izz="0.00010502" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.47059 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="1.3857E-09 -1.5789E-09 -2.4449E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0026045" />
+      <inertia
+        ixx="2.5058E-07"
+        ixy="2.7533E-15"
+        ixz="-8.7367E-15"
+        iyy="1.4882E-07"
+        iyz="2.039E-14"
+        izz="1.4882E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.94118 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.1 1.0156E-09 2.3233E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.069233" />
+      <inertia
+        ixx="2.4469E-05"
+        ixy="2.237E-12"
+        ixz="5.4636E-12"
+        iyy="0.00010084"
+        iyz="-2.8209E-12"
+        izz="0.00010084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.22353 0.22353 0.22353 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="1.3857E-09 -1.5789E-09 -2.4449E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0026045" />
+      <inertia
+        ixx="2.5058E-07"
+        ixy="2.7533E-15"
+        ixz="-8.7367E-15"
+        iyy="1.4882E-07"
+        iyz="2.039E-14"
+        izz="1.4882E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.94118 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" /> 
+    <!--rpy="0.0873 0 0"  -->
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="0.1 -3.903E-10 -2.7898E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.069233" />
+      <inertia
+        ixx="2.4469E-05"
+        ixy="6.6461E-13"
+        ixz="5.7277E-12"
+        iyy="0.00010084"
+        iyz="-4.3415E-13"
+        izz="0.00010084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.47059 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_8">
+    <inertial>
+      <origin
+        xyz="1.3857E-09 -1.5789E-09 -2.4449E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0026045" />
+      <inertia
+        ixx="2.5058E-07"
+        ixy="2.7533E-15"
+        ixz="-8.7367E-15"
+        iyy="1.4882E-07"
+        iyz="2.039E-14"
+        izz="1.4882E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.94118 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_8"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_7" />
+    <child
+      link="link_8" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_9">
+    <inertial>
+      <origin
+        xyz="0.1 2.7898E-09 3.903E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.069233" />
+      <inertia
+        ixx="2.4469E-05"
+        ixy="5.7277E-12"
+        ixz="6.6461E-13"
+        iyy="0.00010084"
+        iyz="-4.3415E-13"
+        izz="0.00010084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.22353 0.22353 0.22353 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_9"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_8" />
+    <child
+      link="link_9" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_10">
+    <inertial>
+      <origin
+        xyz="1.38565880991592E-09 -1.57885902962729E-09 -2.444909830146E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628654" />
+      <inertia
+        ixx="2.50577132320726E-07"
+        ixy="2.75334733975133E-15"
+        ixz="-8.73665794274116E-15"
+        iyy="1.48817137958054E-07"
+        iyz="2.03900857031692E-14"
+        izz="1.48817196674779E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_10"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_9" />
+    <child
+      link="link_10" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_11">
+    <inertial>
+      <origin
+        xyz="0.1 -3.9031E-10 -2.7898E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.069233" />
+      <inertia
+        ixx="2.4469E-05"
+        ixy="6.6461E-13"
+        ixz="5.7277E-12"
+        iyy="0.00010084"
+        iyz="-4.3415E-13"
+        izz="0.00010084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.47059 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_11"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_10" />
+    <child
+      link="link_11" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_12">
+    <inertial>
+      <origin
+        xyz="1.38565869889362E-09 -2.44490996892388E-09 1.57885893248277E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628651" />
+      <inertia
+        ixx="2.50577132320724E-07"
+        ixy="-8.73665729331644E-15"
+        ixz="-2.75334791265467E-15"
+        iyy="1.48817196674777E-07"
+        iyz="-2.03900855565574E-14"
+        izz="1.48817137958052E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_12"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_11" />
+    <child
+      link="link_12" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_13">
+    <inertial>
+      <origin
+        xyz="0.100000025460932 3.90335638811301E-10 2.78980316625876E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692327810195443" />
+      <inertia
+        ixx="2.44689678797687E-05"
+        ixy="-6.64611536281742E-13"
+        ixz="-5.7276859994471E-12"
+        iyy="0.000100841303543619"
+        iyz="-4.34148708629212E-13"
+        izz="0.000100841296377003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.223529411764706 0.223529411764706 0.223529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_13"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_12" />
+    <child
+      link="link_13" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_14">
+    <inertial>
+      <origin
+        xyz="1.38565892093823E-09 -1.57885905738286E-09 -2.444909830146E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628647" />
+      <inertia
+        ixx="2.5057713232072E-07"
+        ixy="2.7533475192487E-15"
+        ixz="-8.73665793396741E-15"
+        iyy="1.48817137958049E-07"
+        iyz="2.0390085719748E-14"
+        izz="1.48817196674774E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_14"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0.002"
+      rpy="0 0 0" />
+    <parent
+      link="link_13" />
+    <child
+      link="link_14" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_15">
+    <inertial>
+      <origin
+        xyz="0.0999999745390672 -2.78979797596612E-09 -3.90318888321417E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692327810195458" />
+      <inertia
+        ixx="2.44689678797691E-05"
+        ixy="-5.72768670878389E-12"
+        ixz="-6.6461138574225E-13"
+        iyy="0.000100841296377004"
+        iyz="-4.3414887695949E-13"
+        izz="0.000100841303543619" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.470588235294118 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_15"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_14" />
+    <child
+      link="link_15" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_16">
+    <inertial>
+      <origin
+        xyz="1.38565914298283E-09 -1.57885900187171E-09 -2.44491005219061E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628647" />
+      <inertia
+        ixx="2.50577132320719E-07"
+        ixy="2.75334725921447E-15"
+        ixz="-8.73665788658928E-15"
+        iyy="1.48817137958049E-07"
+        iyz="2.03900857517836E-14"
+        izz="1.48817196674774E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_16"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_15" />
+    <child
+      link="link_16" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_17">
+    <inertial>
+      <origin
+        xyz="0.10000002546093 -3.9028158482779E-10 -2.78978085077597E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692327810195466" />
+      <inertia
+        ixx="2.44689678797693E-05"
+        ixy="6.64612033832343E-13"
+        ixz="5.72768611867044E-12"
+        iyy="0.000100841303543621"
+        iyz="-4.34148971213868E-13"
+        izz="0.000100841296377005" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.223529411764706 0.223529411764706 0.223529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_17"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_16" />
+    <child
+      link="link_17" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_18">
+    <inertial>
+      <origin
+        xyz="1.38565869889362E-09 -1.57885902962729E-09 -2.44491005219061E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628649" />
+      <inertia
+        ixx="2.5057713232072E-07"
+        ixy="2.75334748069667E-15"
+        ixz="-8.73665791710326E-15"
+        iyy="1.48817137958049E-07"
+        iyz="2.03900857644585E-14"
+        izz="1.48817196674774E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_18"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_17" />
+    <child
+      link="link_18" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_19">
+    <inertial>
+      <origin
+        xyz="0.100000025460936 -3.90270982197904E-10 -2.78978717904721E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692327810195443" />
+      <inertia
+        ixx="2.44689678797689E-05"
+        ixy="6.64611819333894E-13"
+        ixz="5.72768607730279E-12"
+        iyy="0.000100841303543618"
+        iyz="-4.34148864879815E-13"
+        izz="0.000100841296377003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.470588235294118 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_19"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_18" />
+    <child
+      link="link_19" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_20">
+    <inertial>
+      <origin
+        xyz="1.38565825480441E-09 -1.5788590157495E-09 -2.44490994116831E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628647" />
+      <inertia
+        ixx="2.50577132320719E-07"
+        ixy="2.75334744161058E-15"
+        ixz="-8.73665791757591E-15"
+        iyy="1.48817137958049E-07"
+        iyz="2.03900857826775E-14"
+        izz="1.48817196674774E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_20"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_19" />
+    <child
+      link="link_20" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_21">
+    <inertial>
+      <origin
+        xyz="0.0999999745390645 -2.78983004753375E-09 -3.90326548860287E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.069232781019545" />
+      <inertia
+        ixx="2.44689678797689E-05"
+        ixy="-5.72768659780425E-12"
+        ixz="-6.64611413054657E-13"
+        iyy="0.000100841296377004"
+        iyz="-4.34148823840296E-13"
+        izz="0.000100841303543619" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.223529411764706 0.223529411764706 0.223529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_21"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_20" />
+    <child
+      link="link_21" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_22">
+    <inertial>
+      <origin
+        xyz="1.38565825480441E-09 -1.57885904350508E-09 -2.44491005219061E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260445255628646" />
+      <inertia
+        ixx="2.50577132320719E-07"
+        ixy="2.75334744105818E-15"
+        ixz="-8.73665788668311E-15"
+        iyy="1.48817137958049E-07"
+        iyz="2.03900857671802E-14"
+        izz="1.48817196674774E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_22"
+    type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_21" />
+    <child
+      link="link_22" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_23">
+    <inertial>
+      <origin
+        xyz="0.0858739302014619 4.02340660787814E-12 1.529776305631E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.0602639365758659" />
+      <inertia
+        ixx="2.05724897300915E-05"
+        ixy="1.10890114294321E-14"
+        ixz="4.26471630491588E-15"
+        iyy="0.000212919430326202"
+        iyz="-6.03526480847622E-13"
+        izz="0.000215969763060927" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.470588235294118 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model_ccdhrm/meshes/link_23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_23"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_22" />
+    <child
+      link="link_23" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34888"
+      upper="0.34888"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <joint
+    name="joint_tip"
+    type="fixed">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_23" />
+    <child
+      link="link_tip" />
+  </joint>
+  <link
+    name="link_tip">
+  </link>
+</robot>
