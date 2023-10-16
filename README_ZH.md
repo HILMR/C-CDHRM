@@ -45,17 +45,17 @@
 #### 遥操作平台
 ![P](https://hilmr.github.io/data/media/project1-5.gif)
 
-#### 规划求解器性能
+#### 点到点求解器:定点运动
 <figure class="half">
     <img src="https://hilmr.github.io/data/media/TMECH-1.gif">
     <img src="https://hilmr.github.io/data/media/TMECH-2.gif">
 </figure>
 
 #### 跟随领导者求解器:环境探索
-![P](https://hilmr.github.io/data/media/IROS-1.gif)
-
-#### 点到点求解器:定点运动
-![P](https://hilmr.github.io/data/media/IROS-3.gif)
+<figure class="half">
+    <img src="https://hilmr.github.io/data/media/IROS-1.gif">
+    <img src="https://hilmr.github.io/data/media/project1-4.gif">
+</figure>
 
 ## 致谢
 
